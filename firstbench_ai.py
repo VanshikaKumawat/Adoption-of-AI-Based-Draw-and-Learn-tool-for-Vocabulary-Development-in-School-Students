@@ -23,7 +23,16 @@ for cls in classes:
     output = f"quickdraw_raw/{cls}.ndjson"
     try:
         # Download the dataset file
-        !wget -q --show-progress -O $output $url
+             # Download the dataset file
+        import requests
+
+        url = "https://your-file-url.com/yourmodel.pth"
+        output = "best_model.pth"
+
+        response = requests.get(url)
+        with open(output, 'wb') as f:
+            f.write(response.content)
+            
         print(f"Successfully downloaded data for '{cls}'.")
     except Exception as e:
         print(f"Failed to download data for '{cls}': {str(e)}")
