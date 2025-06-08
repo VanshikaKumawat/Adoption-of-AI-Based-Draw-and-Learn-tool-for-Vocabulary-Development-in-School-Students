@@ -1,6 +1,10 @@
 streamlit
-numpy
 opencv-python
-pillow
-streamlit-drawable-canvas
 torch
+torchvision
+numpy
+pillow
+scikit-learn
+pandas
+matplotlib
+streamlit-drawable-canvas
